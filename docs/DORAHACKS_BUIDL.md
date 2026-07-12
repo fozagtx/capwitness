@@ -43,9 +43,9 @@ Stack: Node.js, Next.js product UI, Mastra durable workflow worker, official `@c
 | --- | --- |
 | Public GitHub | https://github.com/fozagtx/capwitness |
 | License | MIT |
-| CROO Agent Store listing | _PENDING_DASHBOARD_ |
+| CROO Agent Store listing | https://agent.croo.network/agents/2275eea4-951b-4c35-9546-67dfd678fde0 |
 | Demo video (≤5 min) | _PENDING_RECORDING_ |
-| Live app (optional) | local / deployed URL |
+| Live app (optional) | https://capwitness.up.railway.app |
 
 ## Demo video summary
 

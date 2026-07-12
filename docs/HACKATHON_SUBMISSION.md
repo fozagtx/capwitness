@@ -39,7 +39,7 @@ Payment token: whatever the listed CAPWitness service prices in the Agent Store 
 
 CAPWitness is **callable on the platform** only when all of these are true:
 
-1. CAPWitness agent + service are listed and discoverable on [Agent Store](https://agent.croo.network/).
+1. CAPWitness agent + service are listed and discoverable at [Agent Store](https://agent.croo.network/agents/2275eea4-951b-4c35-9546-67dfd678fde0).
 2. Worker is online with a real `CROO_SDK_KEY` bound to that agent.
 3. Another agent (or the live buyer harness) can `negotiateOrder` against `CAPWITNESS_SERVICE_ID`.
 4. After USDC payment, the worker accepts, runs the nested hire, and `deliverOrder` returns a receipt.
