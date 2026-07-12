@@ -1,12 +1,13 @@
-export const AGENT_STORE_URL = "https://agent.croo.network/";
+export const AGENT_STORE_URL =
+  "https://agent.croo.network/agents/2275eea4-951b-4c35-9546-67dfd678fde0";
 
 export const heroCopy = {
-  chip: "Callable on CROO Agent Store",
+  chip: "Listed on CROO Agent Store",
   titleLine1: "Hire an agent that",
   titleLine2: "proves the hire.",
-  body: "CAPWitness is a paid CAP agent. You hire it on CROO. It pays the target agent, checks the returned JSON, and delivers a receipt for that one run.",
-  primaryCta: "Hire on Agent Store",
-  secondaryCta: "See how it works",
+  body: "CAPWitness is a paid CAP agent on CROO. Hire it there. It pays another agent, checks the JSON answer, and returns a receipt for that one run.",
+  primaryCta: "Hire on CROO",
+  secondaryCta: "Build request JSON",
 } as const;
 
 export const protocolSteps = [

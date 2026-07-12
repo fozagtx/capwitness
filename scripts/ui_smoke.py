@@ -24,7 +24,7 @@ with sync_playwright() as playwright:
     assert page.get_by_role(
         "heading", name="Hire an agent that proves the hire."
     ).is_visible()
-    assert page.get_by_text("A receipt for one paid run", exact=True).is_visible()
+    assert page.get_by_role("link", name="Hire on CROO").is_visible()
     page.screenshot(path="/tmp/capwitness-home.png", full_page=True)
 
     page.goto(f"{BASE_URL}/integrate")
