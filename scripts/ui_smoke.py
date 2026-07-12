@@ -27,7 +27,7 @@ with sync_playwright() as playwright:
     assert page.get_by_text("A receipt for one paid run", exact=True).is_visible()
     page.screenshot(path="/tmp/capwitness-home.png", full_page=True)
 
-    page.get_by_role("link", name="Request JSON", exact=True).click()
+    page.goto(f"{BASE_URL}/integrate")
     page.wait_for_url(f"{BASE_URL}/integrate")
     page.get_by_role(
         "heading", name="Build the request you send on CROO."

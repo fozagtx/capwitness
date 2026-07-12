@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Braces, CircleDollarSign, ReceiptText, Route } from "lucide-react";
 import { RequirementBuilder } from "@/components/requirement-builder";
 import { SectionHeading } from "@/components/pro/section-heading";
 import { Surface } from "@/components/pro/surface";
-import { SiteHeader } from "@/components/site-header";
+import { BrandMark } from "@/components/brand-mark";
 
 export const metadata: Metadata = {
   title: "Request JSON",
@@ -41,7 +42,15 @@ const integrationSteps = [
 export default function IntegratePage() {
   return (
     <div className="min-h-screen">
-      <SiteHeader />
+      <div className="mx-auto flex h-14 max-w-6xl items-center px-4 sm:px-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-sm font-medium tracking-tight"
+        >
+          <BrandMark />
+          CAPWitness
+        </Link>
+      </div>
       <main>
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
