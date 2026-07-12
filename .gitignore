@@ -32,6 +32,23 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.live.example
+.env.live.local
+
+# runtime evidence and durable workflow snapshots
+/data/receipts/*
+/data/*.db
+/data/*.db-shm
+/data/*.db-wal
+*.db-shm
+*.db-wal
+/data/live-validation/
+/data/live-results/
+/data/demo/
+*.live-cap-pending.json
+capwitness-live-*.json
+!/data/receipts/.gitkeep
 
 # vercel
 .vercel
