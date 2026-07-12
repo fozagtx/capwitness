@@ -41,7 +41,7 @@ Stack: Node.js, Next.js product UI, Mastra durable workflow worker, official `@c
 
 | Field | Value |
 | --- | --- |
-| Public GitHub | _PENDING_PUSH_ |
+| Public GitHub | https://github.com/fozagtx/capwitness |
 | License | MIT |
 | CROO Agent Store listing | _PENDING_DASHBOARD_ |
 | Demo video (≤5 min) | _PENDING_RECORDING_ |

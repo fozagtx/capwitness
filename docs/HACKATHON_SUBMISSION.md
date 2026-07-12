@@ -9,7 +9,7 @@ Deadline: **2026-07-12 09:00** (DoraHacks). Every BUIDL must satisfy all five re
 | 1 | **Build** — agent in any framework, sovereign data/execution | **Met** | Next.js app + Mastra durable worker under your process; no CROO-hosted execution of assertion logic |
 | 2 | **Integrate CAP** — callable, accepts USDC, settles on-chain | **Code met · Live pending credentials** | Official `@croo-network/sdk` provider + nested buyer. Live hire blocked until Agent Store listing + SDK keys + funded AA wallet |
 | 3 | **List** on CROO Agent Store | **Pending dashboard action** | See [AGENT_STORE_LISTING.md](./AGENT_STORE_LISTING.md) |
-| 4 | **Open-source + demo** — public MIT/Apache repo + ≤5 min video | **Repo packaging in progress · Demo script ready** | MIT `LICENSE`. Demo: [DEMO.md](./DEMO.md) |
+| 4 | **Open-source + demo** — public MIT/Apache repo + ≤5 min video | **Repo public · Demo recording pending live CAP** | https://github.com/fozagtx/capwitness · MIT · Demo: [DEMO.md](./DEMO.md) |
 | 5 | **Submit** BUIDL on DoraHacks | **Pending file** | Copy fields from [DORAHACKS_BUIDL.md](./DORAHACKS_BUIDL.md) |
 
 ## Tracks (max 2)
