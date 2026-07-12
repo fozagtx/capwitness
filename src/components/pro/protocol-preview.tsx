@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { protocolSteps, receiptSchemaFields } from "@/content/proofrun";
+import { protocolSteps, receiptFields } from "@/content/proofrun";
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/icon";
 import { Surface } from "./surface";
@@ -21,8 +21,11 @@ export const ProtocolPreview = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <Surface
     ref={ref}
-    className={cn("mx-auto w-full max-w-5xl overflow-hidden bg-card", className)}
-    elevation="raised"
+    className={cn(
+      "mx-auto w-full max-w-5xl overflow-hidden border-b-0 bg-card shadow-[0px_24px_64px_0px_rgba(24,33,54,0.08)]",
+      className,
+    )}
+    elevation="flat"
     radius="large"
     {...props}
   >
@@ -33,50 +36,57 @@ export const ProtocolPreview = React.forwardRef<
           <span className="size-2.5 rounded-full bg-[#FEBC2E]" />
           <span className="size-2.5 rounded-full bg-[#28C840]" />
         </div>
-        <span className="text-sm text-muted-foreground">How a check works</span>
+        <span className="rounded-lg bg-muted px-2.5 py-1 text-xs text-muted-foreground">
+          capwitness · one run receipt
+        </span>
       </div>
     </div>
 
-    <div className="grid min-h-[380px] md:grid-cols-[220px_1fr]">
-      <aside className="hidden border-r border-border bg-muted/60 p-3 md:block">
+    <div className="grid md:grid-cols-[220px_1fr]">
+      <aside className="hidden border-r border-border bg-muted/50 p-3 md:block">
         <p className="px-3 py-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
-          Steps
+          Flow
         </p>
-        <nav aria-label="Check steps" className="mt-1 space-y-1">
+        <nav aria-label="How CAPWitness runs" className="mt-1 space-y-1">
           {protocolSteps.map((step, index) => (
             <div
               key={step.index}
               className={cn(
                 "flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm",
                 index === 0
-                  ? "bg-card text-foreground shadow-sm"
+                  ? "bg-card font-medium text-foreground shadow-sm"
                   : "text-muted-foreground",
               )}
             >
               <Icon icon={stepIcons[step.icon]} width={16} aria-hidden />
-              {step.title}
+              <span className="truncate">{step.title}</span>
             </div>
           ))}
         </nav>
       </aside>
 
       <div className="min-w-0 p-5 sm:p-6">
-        <h3 className="text-xl font-semibold tracking-tight">
-          What’s on the receipt
+        <p className="text-xs font-medium uppercase tracking-[0.12em] text-primary">
+          What you get back
+        </p>
+        <h3 className="mt-2 text-xl font-semibold tracking-tight">
+          A receipt for one paid run
         </h3>
         <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">
-          Shareable proof the paid call happened and your checks ran. Not a
-          claim the agent is forever trustworthy.
+          Enough to show the hire happened and your checks ran. Not a claim the
+          target agent is forever trustworthy.
         </p>
 
         <dl className="mt-5">
-          {receiptSchemaFields.map((field) => (
+          {receiptFields.map((field) => (
             <div
               key={field.label}
               className="grid gap-1 border-b border-border py-3.5 last:border-b-0 sm:grid-cols-[120px_1fr] sm:items-center sm:gap-5"
             >
               <dt className="text-sm text-muted-foreground">{field.label}</dt>
-              <dd className="text-sm text-foreground">{field.value}</dd>
+              <dd className="text-sm font-medium text-foreground">
+                {field.value}
+              </dd>
             </div>
           ))}
         </dl>

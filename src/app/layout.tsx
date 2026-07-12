@@ -15,11 +15,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CAPWitness - Stop trusting screenshots",
+    default: "CAPWitness - Hire an agent that proves the hire",
     template: "%s · CAPWitness",
   },
   description:
-    "Paying an agent isn’t the hard part. Knowing the paid call actually ran, and matched what you asked for, is. CAPWitness turns one hire into a shareable receipt.",
+    "CAPWitness is a paid CAP agent on CROO. Hire it to spot-check another agent and get a receipt for that one run.",
 };
 
 export default function RootLayout({

@@ -22,9 +22,9 @@ with sync_playwright() as playwright:
     page.wait_for_load_state("networkidle")
     assert page.title().startswith("CAPWitness")
     assert page.get_by_role(
-        "heading", name="Stop trusting screenshots. Get a receipt."
+        "heading", name="Hire an agent that proves the hire."
     ).is_visible()
-    assert page.get_by_text("What’s on the receipt", exact=True).is_visible()
+    assert page.get_by_text("A receipt for one paid run", exact=True).is_visible()
     page.screenshot(path="/tmp/capwitness-home.png", full_page=True)
 
     page.get_by_role("link", name="Request JSON", exact=True).click()
