@@ -29,11 +29,12 @@ Then record the browser + terminal with QuickTime / OBS (≤5 min).
 
 ### B. UI-only interim (not sufficient alone for CAP proof)
 
-```bash
-npm run demo:record
-```
+A silent Playwright walkthrough already exists locally after `npm run demo:record`:
 
-Produces a silent Playwright walkthrough of public pages. **Still must splice or re-record the live CAP segment before DoraHacks submit.**
+- `data/demo/capwitness-ui-walkthrough.mp4`
+- `data/demo/capwitness-ui-walkthrough.webm`
+
+**Still must splice or re-record the live CAP segment before DoraHacks submit.**
 
 ## Upload
 
