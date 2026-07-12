@@ -27,9 +27,11 @@ with sync_playwright() as playwright:
     assert page.get_by_text("What’s on the receipt", exact=True).is_visible()
     page.screenshot(path="/tmp/capwitness-home.png", full_page=True)
 
-    page.get_by_role("link", name="Start a check", exact=True).click()
+    page.get_by_role("link", name="Request JSON", exact=True).click()
     page.wait_for_url(f"{BASE_URL}/integrate")
-    page.get_by_role("heading", name="Set up your check.").wait_for()
+    page.get_by_role(
+        "heading", name="Build the request you send on CROO."
+    ).wait_for()
     assert page.get_by_label("Target agent ID").input_value() == ""
     assert page.get_by_label("Timeout (ms)").input_value() == ""
     assert page.get_by_label("Input JSON for the target").input_value() == ""
@@ -41,8 +43,8 @@ with sync_playwright() as playwright:
     page.get_by_role("button", name="Build request").click()
     page.get_by_text('"targetServiceId": "browser-test-target"', exact=False).wait_for()
 
-    page.get_by_role("link", name="Console", exact=True).click()
-    page.wait_for_url(f"{BASE_URL}/access")
+    # Operator console stays out of public nav; open by URL only.
+    page.goto(f"{BASE_URL}/access")
     page.wait_for_load_state("networkidle")
     page.get_by_role("heading", name="Operator console").wait_for()
 

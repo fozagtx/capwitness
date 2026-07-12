@@ -8,6 +8,8 @@ import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { evidenceFeatures } from "@/content/proofrun";
 
+const AGENT_STORE_URL = "https://agent.croo.network/";
+
 const featureIcons = {
   lifecycle: "solar:clock-circle-linear",
   assertion: "solar:checklist-minimalistic-linear",
@@ -31,13 +33,24 @@ export default function Home() {
                 <span className="block text-primary">Get a receipt.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
-                Paying an agent isn’t the hard part. Knowing the paid call
-                actually ran, and matched what you asked for, is. CAPWitness
-                turns one hire into evidence you can share.
+                Hire CAPWitness on the CROO Agent Store. It pays another agent,
+                checks the answer, and returns evidence for that one call. You
+                never sign into this site to run a check.
               </p>
               <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild size="lg" className="w-full sm:w-auto">
-                  <a href="#problem">Why this exists</a>
+                  <a
+                    href={AGENT_STORE_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Hire on Agent Store
+                    <Icon
+                      icon="solar:arrow-right-linear"
+                      width={16}
+                      aria-hidden
+                    />
+                  </a>
                 </Button>
                 <Button
                   asChild
@@ -45,17 +58,7 @@ export default function Home() {
                   variant="secondary"
                   className="w-full sm:w-auto"
                 >
-                  <Link href="/integrate">
-                    Start a check
-                    <span className="grid size-[22px] place-items-center rounded-full bg-secondary">
-                      <Icon
-                        icon="solar:arrow-right-linear"
-                        width={14}
-                        className="text-muted-foreground"
-                        aria-hidden
-                      />
-                    </span>
-                  </Link>
+                  <a href="#how">How it works</a>
                 </Button>
               </div>
             </div>
@@ -69,7 +72,7 @@ export default function Home() {
               align="center"
               eyebrow="The problem"
               title="You can hire any agent. You still can’t prove the job."
-              description="After you pay, you’re left with logs, screenshots, or the seller’s word. Nothing small and honest travels with the work."
+              description="After you pay on CAP, you’re left with logs, screenshots, or the seller’s word. Nothing small and honest travels with the work."
             />
             <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
               <Surface className="bg-card p-6 shadow-sm" radius="large" tone="danger">
@@ -98,7 +101,7 @@ export default function Home() {
               align="center"
               eyebrow="What we do"
               title="One paid spot-check. One receipt."
-              description="We hire the target, check the JSON, and report what happened. No reputation score. No forever guarantee."
+              description="Runs as a CAP agent on CROO. Hire it there. The worker on our side stays Online and does the nested hire."
             />
             <div className="mt-12 grid gap-4 md:grid-cols-3">
               {evidenceFeatures.map((item) => (
@@ -174,19 +177,29 @@ export default function Home() {
             >
               <div>
                 <h2 className="text-xl font-semibold tracking-tight">
-                  Spot-check before you trust more spend.
+                  Hire it where agents get hired.
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  If setup is missing, we show that clearly. We never fake a
-                  success.
+                  CAPWitness lives on the CROO Agent Store. This site explains
+                  the product and helps you shape the request JSON. No login
+                  required to use the agent.
                 </p>
               </div>
-              <Button asChild variant="secondary">
-                <Link href="/access">
-                  Open console
-                  <Icon icon="solar:arrow-right-linear" width={16} aria-hidden />
-                </Link>
-              </Button>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild>
+                  <a href={AGENT_STORE_URL} target="_blank" rel="noreferrer">
+                    Open Agent Store
+                    <Icon
+                      icon="solar:arrow-right-linear"
+                      width={16}
+                      aria-hidden
+                    />
+                  </a>
+                </Button>
+                <Button asChild variant="secondary">
+                  <Link href="/integrate">Build request JSON</Link>
+                </Button>
+              </div>
             </Surface>
           </div>
         </section>
@@ -199,7 +212,8 @@ export default function Home() {
               CAPWitness
             </div>
             <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-              Evidence for one paid agent call, not a forever trust badge.
+              A callable CAP agent on CROO. This page is the product story, not
+              the place you run checks.
             </p>
           </div>
           <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
@@ -209,11 +223,16 @@ export default function Home() {
             <a href="#how" className="hover:text-foreground">
               How it works
             </a>
+            <a
+              href={AGENT_STORE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-foreground"
+            >
+              Agent Store
+            </a>
             <Link href="/integrate" className="hover:text-foreground">
-              Start a check
-            </Link>
-            <Link href="/access" className="hover:text-foreground">
-              Console
+              Request JSON
             </Link>
           </div>
         </div>

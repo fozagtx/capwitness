@@ -4,6 +4,8 @@ import Link from "next/link";
 import { BrandMark } from "./brand-mark";
 import { Button } from "./ui/button";
 
+const AGENT_STORE_URL = "https://agent.croo.network/";
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
@@ -18,12 +20,14 @@ export function SiteHeader() {
         <nav aria-label="Primary" className="flex items-center gap-1.5">
           <Button asChild variant="ghost" size="sm" className="rounded-full">
             <Link href="/integrate">
-              <span className="hidden sm:inline">Start a check</span>
-              <span className="sm:hidden">Start</span>
+              <span className="hidden sm:inline">Request JSON</span>
+              <span className="sm:hidden">JSON</span>
             </Link>
           </Button>
           <Button asChild size="sm" className="rounded-full px-4">
-            <Link href="/access">Console</Link>
+            <a href={AGENT_STORE_URL} target="_blank" rel="noreferrer">
+              Agent Store
+            </a>
           </Button>
         </nav>
       </div>

@@ -6,8 +6,9 @@ import { Surface } from "@/components/pro/surface";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Start a check",
-  description: "Build the request CAPWitness needs to spot-check another agent.",
+  title: "Request JSON",
+  description:
+    "Build the JSON buyers send when they hire CAPWitness on the CROO Agent Store.",
 };
 
 const integrationSteps = [
@@ -45,10 +46,11 @@ export default function IntegratePage() {
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
             <h1 className="mt-1 max-w-3xl text-4xl font-bold tracking-[-0.04em] sm:text-5xl">
-              Set up your check.
+              Build the request you send on CROO.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
-              Fill in real values. Nothing is prefilled. Nothing is invented.
+              This page does not run a check or take a login. It only validates
+              the JSON you attach when you hire CAPWitness in the Agent Store.
             </p>
           </div>
         </section>
