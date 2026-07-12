@@ -10,9 +10,10 @@ Built for the [CROO Agent Hackathon](https://dorahacks.io/hackathon/croo-hackath
 
 | Requirement | Where |
 | --- | --- |
+| **CROO Quick Start (CAPWitness)** | [docs/QUICK_START.md](docs/QUICK_START.md) |
 | Build + CAP integrate | This repo (`src/worker`, `@croo-network/sdk`) |
 | Agent Store list | [docs/AGENT_STORE_LISTING.md](docs/AGENT_STORE_LISTING.md) |
-| Open source | MIT [`LICENSE`](LICENSE) |
+| Open source | MIT [`LICENSE`](LICENSE) · https://github.com/fozagtx/capwitness |
 | Demo (≤5 min) | [docs/DEMO.md](docs/DEMO.md) |
 | DoraHacks BUIDL copy | [docs/DORAHACKS_BUIDL.md](docs/DORAHACKS_BUIDL.md) |
 | Full gate status | [docs/HACKATHON_SUBMISSION.md](docs/HACKATHON_SUBMISSION.md) |

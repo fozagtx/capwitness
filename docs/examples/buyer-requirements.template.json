@@ -1,0 +1,9 @@
+{
+  "targetServiceId": "REPLACE_WITH_TARGET_SERVICE_ID",
+  "input": { "ping": true },
+  "assertions": [
+    { "path": "ping", "operator": "exists" }
+  ],
+  "timeoutMs": 60000,
+  "publicReceipt": true
+}
