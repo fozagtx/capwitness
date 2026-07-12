@@ -30,7 +30,7 @@ export const evidenceFeatures = [
     icon: "lifecycle",
     eyebrow: "Proof of the hire",
     title: "Not a screenshot",
-    copy: "Order IDs, timing, and payment proof from the paid call — evidence that travels, not a private log dump.",
+    copy: "Order IDs, timing, and payment proof from the paid call: evidence that travels, not a private log dump.",
   },
   {
     icon: "assertion",

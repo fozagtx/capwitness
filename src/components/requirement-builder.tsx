@@ -123,7 +123,7 @@ export function RequirementBuilder() {
                 setOutput("");
               }}
               inputMode="numeric"
-              placeholder="10000–120000"
+              placeholder="10000-120000"
             />
           </label>
         </div>

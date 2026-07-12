@@ -15,11 +15,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CAPWitness — Stop trusting screenshots",
+    default: "CAPWitness - Stop trusting screenshots",
     template: "%s · CAPWitness",
   },
   description:
-    "Paying an agent isn’t the hard part. Knowing the paid call actually ran — and matched what you asked for — is. CAPWitness turns one hire into a shareable receipt.",
+    "Paying an agent isn’t the hard part. Knowing the paid call actually ran, and matched what you asked for, is. CAPWitness turns one hire into a shareable receipt.",
 };
 
 export default function RootLayout({

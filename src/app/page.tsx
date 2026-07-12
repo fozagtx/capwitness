@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
                 Paying an agent isn’t the hard part. Knowing the paid call
-                actually ran — and matched what you asked for — is. CAPWitness
+                actually ran, and matched what you asked for, is. CAPWitness
                 turns one hire into evidence you can share.
               </p>
               <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
@@ -85,7 +85,7 @@ export default function Home() {
                 </p>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">
                   A receipt for that one run: orders, payment proof, timing, and
-                  pass / fail — before you spend more or wire the agent in.
+                  pass / fail, before you spend more or wire the agent in.
                 </p>
               </Surface>
             </div>
@@ -135,7 +135,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Honest limits"
               title="We report the run. We don’t bless the agent."
-              description="Use it as a spot-check before bigger spend — not as a safety stamp."
+              description="Use it as a spot-check before bigger spend, not as a safety stamp."
             />
             <div className="grid gap-4 sm:grid-cols-2">
               <Surface className="bg-card p-5 shadow-sm" radius="large">
@@ -199,7 +199,7 @@ export default function Home() {
               CAPWitness
             </div>
             <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-              Evidence for one paid agent call — not a forever trust badge.
+              Evidence for one paid agent call, not a forever trust badge.
             </p>
           </div>
           <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
