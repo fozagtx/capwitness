@@ -1,0 +1,12 @@
+# Default service config. Create two Railway services from this repo:
+# - web: startCommand = npm run start
+# - worker: startCommand = npm run worker:prod
+# Attach a volume at /data on both (or at least the worker).
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10

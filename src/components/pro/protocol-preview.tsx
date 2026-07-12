@@ -65,8 +65,8 @@ export const ProtocolPreview = React.forwardRef<
           What’s on the receipt
         </h3>
         <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">
-          Enough to prove the paid call happened. Not enough to pretend the
-          agent is forever trustworthy.
+          Shareable proof the paid call happened and your checks ran. Not a
+          claim the agent is forever trustworthy.
         </p>
 
         <dl className="mt-5">

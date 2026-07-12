@@ -189,7 +189,7 @@ export class CAPWitnessWorker {
     const [innerNegotiations, providerOrders, requesterOrders] = await Promise.all([
       listAllNegotiations(this.client, "requester"),
       listAllOrders(this.client, "provider"),
-      listAllOrders(this.client, "requester"),
+      listAllOrders(this.client, "buyer"),
     ]);
     for (const negotiation of innerNegotiations) {
       const runId = innerRunId(negotiation);

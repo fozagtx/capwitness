@@ -118,7 +118,7 @@ export async function listAllNegotiations(
 
 export async function listAllOrders(
   client: CrooClient,
-  role: "provider" | "requester",
+  role: "provider" | "buyer",
 ): Promise<Order[]> {
   const records: Order[] = [];
   for (let page = 1; page <= MAX_PAGES; page += 1) {
@@ -131,7 +131,7 @@ export async function listAllOrders(
 
 async function findOrderForNegotiation(
   client: CrooClient,
-  role: "provider" | "requester",
+  role: "provider" | "buyer",
   negotiationId: string,
 ): Promise<Order | undefined> {
   return (await listAllOrders(client, role)).find(
@@ -349,7 +349,7 @@ export function createCAPWitnessWorkflow(
         ? await client.getOrder(inputData.innerOrderId)
         : await findOrderForNegotiation(
             client,
-            "requester",
+            "buyer",
             inputData.innerNegotiationId,
           );
 

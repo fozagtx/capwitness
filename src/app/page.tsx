@@ -27,16 +27,17 @@ export default function Home() {
                 CAPWitness
               </p>
               <h1 className="max-w-3xl text-[clamp(2.6rem,8vw,4.35rem)] font-bold leading-[1.05] tracking-[-0.045em]">
-                Proof that an agent
-                <span className="block text-primary">actually ran.</span>
+                Stop trusting screenshots.
+                <span className="block text-primary">Get a receipt.</span>
               </h1>
-              <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground sm:text-lg">
-                Hire CAPWitness. It pays another agent, checks the answer, and
-                gives you a receipt for that one call.
+              <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+                Paying an agent isn’t the hard part. Knowing the paid call
+                actually ran — and matched what you asked for — is. CAPWitness
+                turns one hire into evidence you can share.
               </p>
               <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
                 <Button asChild size="lg" className="w-full sm:w-auto">
-                  <a href="#how">See how it works</a>
+                  <a href="#problem">Why this exists</a>
                 </Button>
                 <Button
                   asChild
@@ -62,13 +63,42 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="problem" className="border-t border-border">
+          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+            <SectionHeading
+              align="center"
+              eyebrow="The problem"
+              title="You can hire any agent. You still can’t prove the job."
+              description="After you pay, you’re left with logs, screenshots, or the seller’s word. Nothing small and honest travels with the work."
+            />
+            <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+              <Surface className="bg-card p-6 shadow-sm" radius="large" tone="danger">
+                <p className="text-sm font-medium text-destructive">Without it</p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  “Trust me, it ran.” No shared proof of the paid call, the
+                  answer, or whether your checks passed.
+                </p>
+              </Surface>
+              <Surface className="bg-card p-6 shadow-sm" radius="large">
+                <p className="text-sm font-medium text-success-foreground">
+                  With CAPWitness
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                  A receipt for that one run: orders, payment proof, timing, and
+                  pass / fail — before you spend more or wire the agent in.
+                </p>
+              </Surface>
+            </div>
+          </div>
+        </section>
+
         <section id="how" className="border-t border-border bg-card/40">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
             <SectionHeading
               align="center"
-              eyebrow="How it works"
-              title="One call. One receipt."
-              description="No score. No reputation theater. Just evidence from the run you paid for."
+              eyebrow="What we do"
+              title="One paid spot-check. One receipt."
+              description="We hire the target, check the JSON, and report what happened. No reputation score. No forever guarantee."
             />
             <div className="mt-12 grid gap-4 md:grid-cols-3">
               {evidenceFeatures.map((item) => (
@@ -105,7 +135,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Honest limits"
               title="We report the run. We don’t bless the agent."
-              description="If something failed, the receipt says so. If it passed, it only passed for that moment."
+              description="Use it as a spot-check before bigger spend — not as a safety stamp."
             />
             <div className="grid gap-4 sm:grid-cols-2">
               <Surface className="bg-card p-5 shadow-sm" radius="large">
@@ -144,7 +174,7 @@ export default function Home() {
             >
               <div>
                 <h2 className="text-xl font-semibold tracking-tight">
-                  Ready to run a live check?
+                  Spot-check before you trust more spend.
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   If setup is missing, we show that clearly. We never fake a
@@ -163,11 +193,19 @@ export default function Home() {
       </main>
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <div className="flex items-center gap-2 font-semibold">
-            <BrandMark />
-            CAPWitness
+          <div>
+            <div className="flex items-center gap-2 font-semibold">
+              <BrandMark />
+              CAPWitness
+            </div>
+            <p className="mt-2 max-w-sm text-sm text-muted-foreground">
+              Evidence for one paid agent call — not a forever trust badge.
+            </p>
           </div>
           <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
+            <a href="#problem" className="hover:text-foreground">
+              The problem
+            </a>
             <a href="#how" className="hover:text-foreground">
               How it works
             </a>
@@ -177,14 +215,6 @@ export default function Home() {
             <Link href="/access" className="hover:text-foreground">
               Console
             </Link>
-            <a
-              href="https://docs.croo.network"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-foreground"
-            >
-              Docs
-            </a>
           </div>
         </div>
       </footer>

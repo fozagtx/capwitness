@@ -25,7 +25,11 @@ const workerEnvironmentSchema = z.object({
     }),
   CROO_SDK_KEY: z.string().min(12),
   CAPWITNESS_SERVICE_ID: z.string().min(1).max(160),
-  CAPWITNESS_AGENT_ID: z.string().min(1).max(160).optional(),
+  CAPWITNESS_AGENT_ID: z
+    .string()
+    .max(160)
+    .optional()
+    .transform((value) => (value && value.length > 0 ? value : undefined)),
   BASE_RPC_URL: z.url().optional(),
   CAPWITNESS_MAX_INNER_PRICE: z
     .string()

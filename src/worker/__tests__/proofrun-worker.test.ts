@@ -142,7 +142,7 @@ class StatefulCAPClient {
   }
 
   async listNegotiations(input: {
-    role?: "provider" | "requester";
+    role?: "provider" | "requester" | "buyer";
     page?: number;
     pageSize?: number;
   }) {
@@ -193,7 +193,7 @@ class StatefulCAPClient {
   }
 
   async listOrders(input: {
-    role?: "provider" | "requester";
+    role?: "provider" | "requester" | "buyer";
     page?: number;
     pageSize?: number;
   }) {

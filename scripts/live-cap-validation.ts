@@ -546,7 +546,7 @@ export async function listAllNegotiations(
 
 export async function listAllOrders(
   client: Pick<AgentClient, "listOrders">,
-  role: "provider" | "requester",
+  role: "provider" | "buyer",
   agentId: string,
 ): Promise<Order[]> {
   const records: Order[] = [];
@@ -619,7 +619,7 @@ async function findOrderForNegotiation(
   config: LiveConfig,
   negotiationId: string,
 ): Promise<Order | undefined> {
-  return (await listAllOrders(client, "requester", config.buyerAgentId)).find(
+  return (await listAllOrders(client, "buyer", config.buyerAgentId)).find(
     (order) => order.negotiationId === negotiationId,
   );
 }
